@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="enter">Enter</string>
+    <string name="sharing">Sharing</string>
+    <string name="notifications">Notify</string>
+    <string name="delete">Delete Product</string>
+    <string name="channel_name">channel</string>
+    <string name="channel_description">channel description</string>
+
+    <string-array name="assessmentType">
+    <item>Objective</item>
+    <item>Performance</item>
+    </string-array>
+</resources>

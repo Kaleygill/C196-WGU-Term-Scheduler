@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="WGU Student Term Scheduler"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+
+
+        <!-- RECEIVER -->
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+
+
+        <!-- COURSES -->
+        <!-- Course Activity that returns to Main Activity with back button -->
+        <activity
+            android:name=".CourseActivity"
+            android:label="Courses"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Course Details Activity returns to Course Activity on back button -->
+        <activity
+            android:name=".CourseDetailActivity"
+            android:label="Courses"
+            android:parentActivityName=".CourseActivity" />
+
+        <!-- Add Course Activity returns to Course Activity on back button -->
+        <activity
+            android:name=".addCourseActivity"
+            android:label="Add Course"
+            android:parentActivityName=".CourseActivity" />
+
+
+
+        <!-- MENTORS -->
+        <!-- Mentor Activity that returns to Main Activity with back button -->
+        <activity
+            android:name=".MentorActivity"
+            android:label="Course Instructors"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Add Mentor Activity that returns to Mentor Activity with back button -->
+        <activity
+            android:name=".AddMentorActivity"
+            android:label="Add Course Instructor"
+            android:parentActivityName=".MentorActivity" />
+
+        <!-- Mentor Details Activity that returns to Mentor Activity with back button -->
+        <activity
+            android:name=".MentorDetailActivity"
+            android:label="Course Instructor Details"
+            android:parentActivityName=".MentorActivity" />
+
+
+
+        <!-- ASSESSMENTS -->
+        <!-- Add Assessment Activity that returns to Assessment Activity with back button -->
+        <activity
+            android:name=".AddAssessmentActivity"
+            android:label="Add Assessments"
+            android:parentActivityName=".AssessmentsActivity" />
+
+        <!-- Assessment Detail Activity returns to Assessment Activity on back button -->
+        <activity
+            android:name=".AssessmentDetailActivity"
+            android:label="Assessments Details"
+            android:parentActivityName=".AssessmentsActivity"/>
+
+        <!-- Assessment Activity returns to Main Activity on back button -->
+        <activity
+            android:name=".AssessmentsActivity"
+            android:label="Assessments"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- TERMS -->
+        <!-- Add Term Activity returns to Term Activity on back button -->
+        <activity
+            android:name=".AddTermActivity"
+            android:label="Add Term"
+            android:parentActivityName=".TermActivity" />
+
+
+        <!-- Term Activity returns to Main Activity on back button -->
+        <activity
+            android:name=".TermActivity"
+            android:label="Terms"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Term Details Activity returns to Term Activity on back button -->
+        <activity
+            android:name=".TermDetailActivity"
+            android:label="Term Details"
+            android:parentActivityName=".TermActivity" />
+
+
+
+        <!-- MAIN ACTIVITY -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
